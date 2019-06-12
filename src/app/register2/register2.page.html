@@ -17,8 +17,8 @@
                 <div class="divSameLineSeparator">
                   <ion-list>
                       <ion-item>
-                        <ion-label text-center position="stacked">País</ion-label>
-                        <ion-select value="Venezuela">
+                        <ion-label class="customLabel" position="stacked">País</ion-label>
+                        <ion-select class="selectCustomPais" value="Venezuela">
                           <ion-select-option value="Venezuela">Venezuela</ion-select-option>
                           <ion-select-option value="México">México</ion-select-option>
                         </ion-select>
@@ -28,8 +28,8 @@
                 <div class="divSameLineSeparator">
                   <ion-list>
                       <ion-item>
-                        <ion-label text-center position="stacked">Edo./ Prov./ Dppto</ion-label>
-                        <ion-select value="Distrito Capital">
+                        <ion-label class="customLabel" position="stacked">Edo./ Prov./ Dppto</ion-label>
+                        <ion-select class="selectCustom" value="Distrito Capital">
                           <ion-select-option value="Distrito Capital">Distrito Capital</ion-select-option>
                           <ion-select-option value="Lara">Lara</ion-select-option>
                         </ion-select>
@@ -40,8 +40,8 @@
               <div class="customDiv">
                 <ion-list>
                   <ion-item>
-                    <ion-label text-center position="stacked">Ciudad</ion-label>
-                    <ion-select value="Caracas">
+                    <ion-label class="customLabel" position="stacked">Ciudad</ion-label>
+                    <ion-select class="selectCustomCiudad" value="Caracas">
                       <ion-select-option value="Caracas">Caracas</ion-select-option>
                       <ion-select-option value="Barquisimeto">Barquisimeto</ion-select-option>
                     </ion-select>
@@ -50,31 +50,31 @@
               </div>
               <div class="customDiv">
                 <ion-item>
-                    <ion-label text-center position="stacked">Direccion</ion-label>
-                    <ion-input  name="address" type="text" ngModel></ion-input>
+                    <ion-label class="customLabel" position="stacked">Direccion</ion-label>
+                    <ion-input  name="address" class="inputCustom" type="text" ngModel></ion-input>
                 </ion-item>
               </div>
               <div class="divSameLine">
                 <div class="divSameLineSeparator">
                   <ion-list>
                       <ion-item>
-                        <ion-label text-center position="stacked">Cod. del País</ion-label>
-                        <ion-select value="+58">
+                        <ion-label class="customLabel" position="stacked">Cod. del País</ion-label>
+                        <ion-select class="selectCustom" value="+58">
                           <ion-select-option value="+58">+58</ion-select-option>
                           <ion-select-option value="+52">+52</ion-select-option>
                         </ion-select>
                       </ion-item>
                   </ion-list>
                 </div>
-                <div class="divSameLineSeparator">
+                <div class="divSameLineSeparator paddingExtra">
                   <ion-item>
-                      <ion-label text-center position="stacked">Teléfono</ion-label>
-                      <ion-input  name="tel" type="number" ngModel></ion-input>
+                      <ion-label class="customLabel" position="stacked">Teléfono</ion-label>
+                      <ion-input  name="tel" class="inputCustom" type="number" ngModel></ion-input>
                   </ion-item>
                 </div>
               </div>
-              <div>
-                <ion-button  size="large" type="submit" [disabled]="form.invalid" expand="block">Continuar</ion-button>
+              <div class="customButton">
+                <ion-button color="secondary" shape="round" type="submit" [disabled]="form.invalid">Continuar</ion-button>
               </div>
             </ion-list>
           </ion-col>
