@@ -1,0 +1,53 @@
+<ion-header>
+  
+</ion-header>
+
+<ion-content>
+  <form #form="ngForm" (ngSubmit)="onSubmit()">
+    <ion-grid>
+        <ion-row color="primary" justify-content-center>
+          <ion-col>
+            <div text-center>
+              <img src="../assets/img/impressjob.PNG">
+              <h2>1/2</h2>
+              <h6>Datos Personales</h6>
+            </div>
+            <ion-list>
+              <div class="customDiv">
+                  <ion-item>
+                      <ion-label class="customLabel" position="stacked">Nombre</ion-label>
+                      <ion-input text-center class="inputCustom" name="name" type="text" ngModel></ion-input>
+                    </ion-item>
+              </div>
+              <div class="customDiv">
+                  <ion-item>
+                      <ion-label class="customLabel" position="stacked">Apellido</ion-label>
+                      <ion-input text-center name="surname" class="inputCustom" type="text" ngModel></ion-input>
+                  </ion-item>
+              </div>
+              <div class="customDiv2">
+                <ion-list>
+                    <ion-item>
+                      <ion-label class="customLabel" position="stacked">Género</ion-label>
+                      <ion-select text-center class="selectCustom" value="Masculino">
+                        <ion-select-option class="selectCustom" value="Masculino">Masculino</ion-select-option>
+                        <ion-select-option class="selectCustom" value="Femenino">Femenino</ion-select-option>
+                      </ion-select>
+                    </ion-item>
+                </ion-list>
+              </div>
+              <div class="customDiv2">
+                <ion-item>
+                    <ion-label class="customLabelFechaNac" position="stacked">Fecha Nacimiento</ion-label>
+                    <ion-datetime class="selectCustomFechaNac" text-center display-format="DD/MM/YYYY" picker-format=" DDDD MMMM YYYY"></ion-datetime>
+                </ion-item>
+              </div>
+              <div class="customButton">
+                <ion-button color="secondary" shape="round" (click)="goRegister2NavContrl()">Siguiente</ion-button>
+              </div>   
+            </ion-list>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+</form>
+</ion-content>
