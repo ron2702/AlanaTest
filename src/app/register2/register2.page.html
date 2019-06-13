@@ -3,7 +3,7 @@
 </ion-header>
 
 <ion-content>
-  <form #form="ngForm" (ngSubmit)="register(form)">
+  <form #form="ngForm" [formGroup]="myForm2">
     <ion-grid>
         <ion-row color="primary" justify-content-center>
           <ion-col>
@@ -18,7 +18,7 @@
                   <ion-list>
                       <ion-item>
                         <ion-label class="customLabel" position="stacked">País</ion-label>
-                        <ion-select class="selectCustomPais" value="Venezuela">
+                        <ion-select class="selectCustomPais" formControlName="country" value="Venezuela">
                           <ion-select-option value="Venezuela">Venezuela</ion-select-option>
                           <ion-select-option value="México">México</ion-select-option>
                         </ion-select>
@@ -29,7 +29,7 @@
                   <ion-list>
                       <ion-item>
                         <ion-label class="customLabel" position="stacked">Edo./ Prov./ Dppto</ion-label>
-                        <ion-select class="selectCustom" value="Distrito Capital">
+                        <ion-select class="selectCustom" formControlName="state" value="Distrito Capital">
                           <ion-select-option value="Distrito Capital">Distrito Capital</ion-select-option>
                           <ion-select-option value="Lara">Lara</ion-select-option>
                         </ion-select>
@@ -41,7 +41,7 @@
                 <ion-list>
                   <ion-item>
                     <ion-label class="customLabel" position="stacked">Ciudad</ion-label>
-                    <ion-select class="selectCustomCiudad" value="Caracas">
+                    <ion-select class="selectCustomCiudad" formControlName="city" value="Caracas">
                       <ion-select-option value="Caracas">Caracas</ion-select-option>
                       <ion-select-option value="Barquisimeto">Barquisimeto</ion-select-option>
                     </ion-select>
@@ -51,7 +51,7 @@
               <div class="customDiv">
                 <ion-item>
                     <ion-label class="customLabel" position="stacked">Direccion</ion-label>
-                    <ion-input  name="address" class="inputCustom" type="text" ngModel></ion-input>
+                    <ion-input  class="inputCustom" type="text" formControlName="adress" ngModel></ion-input>
                 </ion-item>
               </div>
               <div class="divSameLine">
@@ -59,7 +59,7 @@
                   <ion-list>
                       <ion-item>
                         <ion-label class="customLabel" position="stacked">Cod. del País</ion-label>
-                        <ion-select class="selectCustom" value="+58">
+                        <ion-select class="selectCustom" formControlName="code" value="+58">
                           <ion-select-option value="+58">+58</ion-select-option>
                           <ion-select-option value="+52">+52</ion-select-option>
                         </ion-select>
@@ -69,12 +69,12 @@
                 <div class="divSameLineSeparator paddingExtra">
                   <ion-item>
                       <ion-label class="customLabel" position="stacked">Teléfono</ion-label>
-                      <ion-input  name="tel" class="inputCustom" type="number" ngModel></ion-input>
+                      <ion-input  formControlName="telnumber" class="inputCustom" type="text" ngModel></ion-input>
                   </ion-item>
                 </div>
               </div>
               <div class="customButton">
-                <ion-button color="secondary" shape="round" type="submit" [disabled]="form.invalid">Continuar</ion-button>
+                <ion-button color="secondary" shape="round" (click)="goAlert()">Continuar</ion-button>
               </div>
             </ion-list>
           </ion-col>
